@@ -1169,6 +1169,7 @@ public class Levenshtein {
 	 * @return An map of coordinates that represent the path 
 	 * 		(0 = starting point, 1 = deleted, 2 = inserted, 3 = substituted, 4 = swapped)
 	 */
+	
 	protected static Map<HashPoint,Integer> getIdealPath(float[][] matrix) {
 		
 		// Return null if matrix is null (for public call of function in ComparedStrings)
@@ -1438,6 +1439,7 @@ public class Levenshtein {
 	 * @param firstSymbols The array symbols of the first word to include into the matrix
 	 * @param secondSymbols The array of symbols of the second word to include into the matrix
 	 */
+	/*
 	//@SuppressWarnings("unused") // Used only by another unused function
 	private static void printMatrix(float[][] matrix, String[] firstSymbols, String[] secondSymbols) {
 	
@@ -1490,13 +1492,14 @@ public class Levenshtein {
 		System.out.println("----------------------");
 		
 	}
-	
+	*/
 	/**
 	 * (Debugging:) Helper function that converts char arrays to String arrays to use the proper function to print matrix
 	 * @param matrix The matrix to print to the console
 	 * @param firstSymbols The char array of symbols for the first word
 	 * @param secondSymbols The char array of symbols for the second word
 	 */
+	/*
 	@SuppressWarnings("unused")
 	private static void printMatrix(float[][] matrix, char[] firstSymbols, char[] secondSymbols) {
 		
@@ -1513,7 +1516,7 @@ public class Levenshtein {
 		printMatrix(matrix, firstTempArray, secondTempArray);
 		
 	}
-	
+	*/
 	/**
 	 * (Debugging:) Internal debugging function to print a map of matchings to the console
 	 * @param map The map to be printed
@@ -1549,6 +1552,7 @@ public class Levenshtein {
 	 * (Debugging:) Internal debugging function to print a phonetic map to the console
 	 * @param map The phonetic map to be printed
 	 */
+	/*
 	@SuppressWarnings("unused")
 	private static void printPhoneticMap(Map<String,Float[]> map) {
 	
@@ -1570,7 +1574,7 @@ public class Levenshtein {
 		}
 		
 	}
-	
+	*/
 	/**
 	 * Get the path to the original feature file for XSAMPA
 	 * @return The path to the original feature file as a String 
