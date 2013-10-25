@@ -22,8 +22,7 @@ public class LevenshteinTest {
 		Assert.assertEquals(0.85, answer,delta);
 		
 		}
-		catch(NullPointerException ex)
-		{
+		catch(NullPointerException ex) {
 			Boolean condition=ex instanceof NullPointerException;
 			Assert.assertTrue(condition);
 		}
@@ -37,9 +36,9 @@ public class LevenshteinTest {
 		Levenshtein ls = new Levenshtein();
 		
 		String firstString = "A bird in the hand is worth two in the bush";
-		String secondString = "A börd in zhä händ is wörth++{}{}}{++ tuh in thä busch";
+		String secondString = "A b�rd in zhä h�xind is wörth tuh in thä busch";
 		
-		//float answer=ls.compare(firstString, secondString);
+		float answer=ls.compare(firstString, secondString);
 		
 		//double delta=0.009;
 		//Assert.assertEquals(0.85, answer,delta);
