@@ -15,9 +15,7 @@ public class LevenshteinTest {
 		
 		String firstString = null;
 		String secondString = "A börd in zhä händ is wörth tuh in thä busch";
-		
 		float answer=ls.compare(firstString, secondString);
-		
 		double delta=0.009;
 		Assert.assertEquals(0.85, answer,delta);
 		
@@ -230,4 +228,99 @@ public class LevenshteinTest {
 		}
 	}
 	
+	@Test
+	public void levFlagTest2() {
+		//Identical input
+		try
+		{
+			String firstString = "A bird in the hand is worth two in the bush";
+			String secondString = "A bird in the hand is worth two in the bush";
+			
+			Levenshtein ls = new Levenshtein();
+			ls.setFlag(LevFlag.ABSOLUTE);
+			ls.compare(firstString, secondString);
+			float answer=ls.compare(firstString, secondString);
+		
+			double delta=0.009;
+			Assert.assertEquals(0.0, answer,delta);
+			
+		}
+		
+		catch(Exception ex)
+		{
+			fail("Unexpected"+ex.getStackTrace());
+		}
+	}
+
+	@Test
+	public void levFlagTest3() {
+		//Identical input
+		try
+		{
+			String firstString = "A bird in the hand is worth two in the bush";
+			String secondString = null;
+			
+			Levenshtein ls = new Levenshtein();
+			ls.setFlag(LevFlag.ABSOLUTE);
+			
+			float answer=ls.compare(firstString, secondString);
+		
+			
+		}
+		
+		catch(NullPointerException ex) {
+			Boolean condition=ex instanceof NullPointerException;
+			Assert.assertTrue(condition);
+		}
+	}
+	
+	@Test
+	public void levFlagTest4() {
+		//Identical input
+		try
+		{
+			String firstString = "kitten";
+			String secondString = "sitting";
+			
+			Levenshtein ls = new Levenshtein();
+			ls.setFlag(LevFlag.ABSOLUTE);
+			ls.compare(firstString, secondString);
+			float answer=ls.compare(firstString, secondString);
+		
+			double delta=0.009;
+			Assert.assertEquals(5, answer,delta);
+			
+		}
+		
+		catch(Exception ex)
+		{
+			fail("Unexpected"+ex.getStackTrace());
+		}
+	}
+	
+	@Test
+	public void levFlagTest5() {
+		//Identical input
+		try
+		{
+			String firstString = "kitten";
+			String secondString = "sitting";
+			
+			Levenshtein ls = new Levenshtein();
+			ls.setFlag(LevFlag.ABSOLUTE);
+			ls.compare(firstString, secondString);
+			float answer=ls.compare(firstString, secondString);
+		
+			double delta=0.009;
+			Assert.assertEquals(5, answer,delta);
+			
+		}
+		
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			Boolean condition=ex instanceof ArrayIndexOutOfBoundsException;
+			Assert.assertTrue(condition);
+		}
+	}
+
 }

@@ -1169,7 +1169,6 @@ public class Levenshtein {
 	 * @return An map of coordinates that represent the path 
 	 * 		(0 = starting point, 1 = deleted, 2 = inserted, 3 = substituted, 4 = swapped)
 	 */
-	
 	protected static Map<HashPoint,Integer> getIdealPath(float[][] matrix) {
 		
 		// Return null if matrix is null (for public call of function in ComparedStrings)
@@ -1232,6 +1231,7 @@ public class Levenshtein {
 		return coordinates;
 		
 	}
+	
 	
 	/**
 	 * Read and setup feature map for phonetic distances
@@ -1427,12 +1427,13 @@ public class Levenshtein {
 	 * (Debugging:) This function tries to reread the phonetic information from original file.
 	 * @return true if attempt to reread was successful, false otherwise (details on System.err)
 	 */
+	/*
 	@SuppressWarnings("unused")
 	private boolean forceRereadPhonetics() {
 		Map<String, Float[]> phoneticMap = readPhonetics(true);
 		return phoneticMap != null ? true : false;
 	}
-	
+	*/
 	/**
 	 * (Debugging:) Function to print any Damerau-Levenshtein table to the console
 	 * @param matrix The (filled) matrix to be printed
@@ -1524,6 +1525,7 @@ public class Levenshtein {
 	 * @param wordsFirstInput The first collection word to include into the output
 	 * @param wordsSecondInput The second collection of word to include into the output
 	 */
+	/*
 	@SuppressWarnings("unused")
 	private static void printMatchMap(Map<Integer,Integer> map, float[][] comparedResults, String[] wordsFirstInput, String[] wordsSecondInput) {
 	
@@ -1547,7 +1549,7 @@ public class Levenshtein {
 		}
 		
 	}
-
+*/
 	/**
 	 * (Debugging:) Internal debugging function to print a phonetic map to the console
 	 * @param map The phonetic map to be printed
