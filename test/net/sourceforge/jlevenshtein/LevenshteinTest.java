@@ -322,5 +322,31 @@ public class LevenshteinTest {
 			Assert.assertTrue(condition);
 		}
 	}
+	
+	@Test
+	public void costTest() {
+		//Identical input
+		try
+		{
+			String firstString = "kitten";
+			String secondString = "sitting";
+			
+			Levenshtein ls = new Levenshtein();
+			ls.setFlag(LevFlag.ABSOLUTE);
+			//ls.compare(firstString, secondString);
+			ls.setCost(1, 0);
+			float answer=ls.getCost(0);
+			
+			double delta=0.009;
+			Assert.assertEquals(1, answer,delta);
+			
+		}
+		
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			Boolean condition=ex instanceof ArrayIndexOutOfBoundsException;
+			Assert.assertTrue(condition);
+		}
+	}
 
 }
