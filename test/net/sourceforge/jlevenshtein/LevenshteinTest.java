@@ -8,7 +8,7 @@ import org.junit.Test;
 public class LevenshteinTest {
 
 	@Test
-	public void compareTest_Nullpointer() {
+	public void compare_Nullpointer_test() {
 		try
 		{
 		Levenshtein ls = new Levenshtein();
@@ -28,7 +28,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void compareTest_Phonetic() {
+	public void compare_Phonetic_test() {
 		try
 		{
 		Levenshtein ls = new Levenshtein();
@@ -52,7 +52,7 @@ public class LevenshteinTest {
 	
 	@SuppressWarnings("deprecation")
 	@Test
-	public void compareTest_CopyConst() {
+	public void compare_CopyConst_test() {
 		try
 		{
 		Levenshtein ls1 = new Levenshtein();
@@ -76,7 +76,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void compareTest_Sample2() {
+	public void compare_Sample2_test() {
 		try
 		{
 		Levenshtein ls = new Levenshtein();
@@ -99,7 +99,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void compareTest_Sample3() {
+	public void compare_Sample3_test() {
 		try
 		{
 		Levenshtein ls = new Levenshtein();	
@@ -121,7 +121,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void levFlagTest() {
+	public void levFlag_test() {
 		try
 		{
 			String firstString = "A bird in the hand is worth two in the bush";
@@ -229,7 +229,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void levFlagTest2() {
+	public void levFlag_test2() {
 		//Identical input
 		try
 		{
@@ -253,7 +253,7 @@ public class LevenshteinTest {
 	}
 
 	@Test
-	public void levFlagTest3() {
+	public void levFlag_test3() {
 		//Identical input
 		try
 		{
@@ -275,7 +275,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void levFlagTest4() {
+	public void levFlag_test4() {
 		//Identical input
 		try
 		{
@@ -299,7 +299,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void levFlagTest5() {
+	public void levFlag_test5() {
 		//Identical input
 		try
 		{
@@ -324,7 +324,7 @@ public class LevenshteinTest {
 	}
 	
 	@Test
-	public void costTest() {
+	public void cost_test() {
 		//Identical input
 		try
 		{

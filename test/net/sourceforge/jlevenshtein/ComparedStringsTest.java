@@ -11,7 +11,7 @@ import net.sourceforge.jlevenshtein.Levenshtein;
 public class ComparedStringsTest {
 
 	@Test
-	public void distanceTest () {
+	public void distance_test () {
 
 		try {
 			Levenshtein ls = new Levenshtein();
@@ -30,7 +30,7 @@ public class ComparedStringsTest {
 	}
 	
 	@Test
-	public void getSecondTest () {
+	public void getSecond_test () {
 
 		try {
 			Levenshtein ls = new Levenshtein();
@@ -49,7 +49,7 @@ public class ComparedStringsTest {
 }
 	
 	@Test
-	public void matchSecondTest() {
+	public void matchSecond_test() {
 		try {
 			Levenshtein ls = new Levenshtein();
 			String firstString = "The quill is mightier than the sword";
@@ -62,19 +62,14 @@ public class ComparedStringsTest {
 			Assert.assertEquals(0.38,result2,delta);
 			Assert.assertEquals("sword", cs.getFirst(cs.matchSecond(2)));
 			
-			/*
-			System.out.printf("The 2nd identified (and possibly transformed) word of string one is: '%s'%n", cs.getFirst(1));
-			System.out.printf("This word was matched to the %dth word of string two: '%s' (overall accuracy: %.2f)%n", 
-					cs.matchFirst(1) + 1, cs.getSecond(cs.matchFirst(1)), cs.index(1, cs.matchFirst(1)));
-			*/
-		}
+			}
 		catch (Exception ex) {
 			fail("Unexpected"+ex.getStackTrace());
 		}
 	}
 	
 	@Test
-	public void compareDetailedTest() {
+	public void compareDetailed_test() {
 		
 		try {
 		Levenshtein ls = new Levenshtein();
@@ -93,7 +88,7 @@ public class ComparedStringsTest {
 	}
 
 	@Test
-	public void indexTest() {
+	public void index_test() {
 		
 		try {
 		Levenshtein ls = new Levenshtein();
@@ -239,7 +234,7 @@ public class ComparedStringsTest {
 	}
 	
 	@Test
-	public void maxIDFirst_Test() {
+	public void maxIDFirst_test() {
 		try
 		{
 		Levenshtein ls = new Levenshtein();
@@ -260,7 +255,7 @@ public class ComparedStringsTest {
 	}
 	
 	@Test
-	public void maxIDSecond_Test() {
+	public void maxIDSecond_test() {
 		try
 		{
 		Levenshtein ls = new Levenshtein();
